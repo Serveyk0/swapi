@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/swapi/static/css/main.283413ce.chunk.css",
-    "main.js": "/swapi/static/js/main.e08e0d1a.chunk.js",
-    "main.js.map": "/swapi/static/js/main.e08e0d1a.chunk.js.map",
+    "main.js": "/swapi/static/js/main.a1bd4dfc.chunk.js",
+    "main.js.map": "/swapi/static/js/main.a1bd4dfc.chunk.js.map",
     "runtime-main.js": "/swapi/static/js/runtime-main.7dd1ff98.js",
     "runtime-main.js.map": "/swapi/static/js/runtime-main.7dd1ff98.js.map",
     "static/js/2.8e880d3a.chunk.js": "/swapi/static/js/2.8e880d3a.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.7dd1ff98.js",
     "static/js/2.8e880d3a.chunk.js",
     "static/css/main.283413ce.chunk.css",
-    "static/js/main.e08e0d1a.chunk.js"
+    "static/js/main.a1bd4dfc.chunk.js"
   ]
 }
