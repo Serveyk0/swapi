@@ -1,7 +1,8 @@
 import React from 'react';
-import { Router, Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import { Route, Switch, Redirect, NavLink } from 'react-router-dom';
 import { Films } from '../pages/Films';
 import history from '../functions/history';
+import { BrowserRouter as Router } from 'react-router-dom'
 import { AllPagesData } from '../pages/AllPagesData';
 const Routers = () => {
     return (
