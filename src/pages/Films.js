@@ -31,7 +31,7 @@ export const Films = () => {
         <div>
             <div className="grid menu-block">
                 <input className="margin-0-auto menu-block__search" type="text" placeholder="search" onChange={(e) => search(e)} />
-                <button className="margin-0-auto menu-block__sort" onClick={() => sort()}>Sort</button>
+                <button className="margin-0-auto menu-block__sort" onClick={() => sort()}>Ssort</button>
             </div>
             <ul className="flex grid-gap grid-justify-center margin-0-auto all-films">
                 {
