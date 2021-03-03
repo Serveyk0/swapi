@@ -2,7 +2,7 @@ import { checkParams } from "./checkParam";
 import { getData } from "./getData";
 import { parseArray } from "./parseArray";
 
-export const checkArrays = async (f, param) => {
+export const checkArrays = async (f) => {
     for (let item in f) {
         if (Array.isArray(f[item]) && (typeof f[item][0] !== "object")) {
             f[item] = await parseArray(f[item]);
@@ -10,7 +10,7 @@ export const checkArrays = async (f, param) => {
         }
         if (typeof f[item] !== "number" && f[item] !== null) {
             if (f[item].split("://")[0] === "http") {
-                f[item] = [await getData(f[item], checkParams(f[item].split("/")[4]))];
+                f[item] = [await getData(f[item], checkParams(f[item].split("/")[5]))];
         }
         }
     }

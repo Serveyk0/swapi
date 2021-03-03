@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 export const getJSXData = (arr) => {
-    const href = window.location.href.split("/")[3] === 'swapi' ? '/swapi' : '';
     return (
         <>
             {
@@ -15,8 +14,10 @@ export const getJSXData = (arr) => {
                             {
                                 Array.isArray(arr[item]) && arr[item].length > 0 ?
                                     arr[item].map((item2, index2) => {
+                                        console.log(item2.id)
+
                                         return (
-                                            <NavLink className="parameter__link" to={href + `/${item2.id}`} key={index2}>
+                                            <NavLink className="parameter__link" to={`/swapi/${item2.id}`} key={index2}>
                                                 {`${item2.name}, `}
                                             </NavLink>
                                         )
