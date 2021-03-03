@@ -70,7 +70,7 @@ a {
 }
 
 .menu-block {
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 
 	.menu-block__search {
 		max-width: 400px;
@@ -164,7 +164,7 @@ a {
 		margin: 20px 0 20px 0;
 		transition: all 0.5s;
 		color: #fff;
-		animation: red 1.5s ease-in-out infinite alternate;
+		animation: red_animation 1.5s ease-in-out infinite alternate;
 		font-weight: 700;
 		letter-spacing: 5px;
 		font-family: "Starjhol";
@@ -174,7 +174,7 @@ a {
 		.parameter__title {
 			color: #228DFF;
 			font-weight: 700;
-			animation: blue 1.5s ease-in-out infinite alternate;
+			animation: blue_animation 1.5s ease-in-out infinite alternate;
 			color: #ffffff;
 		}
 	}
@@ -187,7 +187,7 @@ a {
 }
 
 
-@keyframes red {
+@keyframes red_animation {
 	from {
 		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #aa004a, 0 0 70px #aa004a, 0 0 80px #aa004a, 0 0 100px #aa004a, 0 0 150px #aa004a;
 	}
@@ -197,7 +197,7 @@ a {
 	}
 }
 
-@keyframes blue {
+@keyframes blue_animation {
 	from {
 		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
 	}
