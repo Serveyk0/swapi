@@ -5,7 +5,6 @@ import history from '../functions/history';
 import { AllPagesData } from '../pages/AllPagesData';
 const Routers = () => {
     const href = window.location.href.split("/")[3] === 'swapi' ? '/swapi' : '';
-    console.log(href);
     return (
         <Router history={history}>
             <NavLink className="margin-0-auto text-center title" to={href + '/films'}>star wars</NavLink>
