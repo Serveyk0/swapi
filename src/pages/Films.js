@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 export const Films = () => {
+    const href = window.location.href.split("/")[3] === 'swapi' ? '/swapi' : '';
     const [films, setFilms] = useState([]);
     const [filterFilms, setFilterFilms] = useState([]);
 
@@ -37,7 +38,7 @@ export const Films = () => {
                 {
                     filterFilms.map((film, index) =>
                         <li className="grid grid-align-center text-center film" key={index}>
-                            <NavLink className="grid grid-align-center" to={"/films/" + film.episode_id}>
+                            <NavLink className="grid grid-align-center" to={href + "/films/" + film.episode_id}>
                                 {film.title}
                             </NavLink>
                         </li>
