@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/swapi/static/css/main.2b255e54.chunk.css",
-    "main.js": "/swapi/static/js/main.c86655d3.chunk.js",
-    "main.js.map": "/swapi/static/js/main.c86655d3.chunk.js.map",
+    "main.css": "/swapi/static/css/main.283413ce.chunk.css",
+    "main.js": "/swapi/static/js/main.e08e0d1a.chunk.js",
+    "main.js.map": "/swapi/static/js/main.e08e0d1a.chunk.js.map",
     "runtime-main.js": "/swapi/static/js/runtime-main.7dd1ff98.js",
     "runtime-main.js.map": "/swapi/static/js/runtime-main.7dd1ff98.js.map",
     "static/js/2.8e880d3a.chunk.js": "/swapi/static/js/2.8e880d3a.chunk.js",
     "static/js/2.8e880d3a.chunk.js.map": "/swapi/static/js/2.8e880d3a.chunk.js.map",
     "index.html": "/swapi/index.html",
-    "static/css/main.2b255e54.chunk.css.map": "/swapi/static/css/main.2b255e54.chunk.css.map",
+    "static/css/main.283413ce.chunk.css.map": "/swapi/static/css/main.283413ce.chunk.css.map",
     "static/js/2.8e880d3a.chunk.js.LICENSE.txt": "/swapi/static/js/2.8e880d3a.chunk.js.LICENSE.txt",
     "static/media/App.scss": "/swapi/static/media/bg.b211fc06.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.7dd1ff98.js",
     "static/js/2.8e880d3a.chunk.js",
-    "static/css/main.2b255e54.chunk.css",
-    "static/js/main.c86655d3.chunk.js"
+    "static/css/main.283413ce.chunk.css",
+    "static/js/main.e08e0d1a.chunk.js"
   ]
 }
