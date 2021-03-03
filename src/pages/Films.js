@@ -38,7 +38,7 @@ export const Films = () => {
                 {
                     filterFilms.map((film, index) =>
                         <li className="grid grid-align-center text-center film" key={index}>
-                            <NavLink className="grid grid-align-center" to={"/swapi/films/" + film.episode_id}>
+                            <NavLink className="grid grid-align-center" to={`/${window.location.href.split("/")[3] === "#" ? 'swapi' : ""}/films/${film.episode_id}`}>
                                 {film.title}
                             </NavLink>
                         </li>
