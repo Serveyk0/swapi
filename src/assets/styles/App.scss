@@ -1,0 +1,208 @@
+@import "./colors";
+@import "./mixins/mixin_font_size";
+
+html {
+	background-image: url('../images/bg.jpg');
+	text-transform: lowercase;
+	text-align: justify;
+}
+
+body {
+	margin: 0;
+	font-family: 'Starjedi', sans-serif;
+}
+
+@font-face {
+	font-family: "Starjedi";
+	src: url(../fonts/Starjedi.woff2) format("woff2"),
+		url(../fonts/Starjedi.woff) format("woff")
+}
+
+@font-face {
+	font-family: "Starjhol";
+	src: url(../fonts/Starjhol.woff2) format("woff2"),
+		url(../fonts/Starjhol.woff) format("woff")
+}
+
+.margin-0-auto {
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid {
+	display: grid;
+}
+
+.grid-gap {
+	grid-gap: 15px;
+}
+
+.grid-align-center {
+	align-items: center;
+}
+
+.grid-justify-center {
+	justify-content: center;
+}
+
+.App {
+	width: 90vw;
+}
+
+.title {
+	width: 100%;
+	display: block;
+	text-decoration: none;
+	font-family: "Starjhol";
+	@include fluidFontSize(24px, 42px, 360px, 1280px, 24px);
+}
+
+a {
+	color: $yellow;
+}
+
+.menu-block {
+	grid-template-columns: repeat(2, 1fr);
+
+	.menu-block__search {
+		max-width: 400px;
+		width: 100%;
+		border: 1px solid $yellow;
+		background-color: $input_color;
+		padding: 10px 10px 10px 40px;
+		color: $yellow;
+		border-radius: 15px;
+		letter-spacing: 3px;
+		@include fluidFontSize(14px, 24px, 360px, 1280px, 24px);
+		text-transform: uppercase;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::placeholder {
+			color: $input_placeholder;
+		}
+	}
+
+	.menu-block__sort {
+		max-width: 100%;
+		padding: 5px 50px;
+		background: #10100e;
+		color: #ffffff;
+		font-size: 24px;
+		border: none;
+		letter-spacing: 1em;
+
+		&:hover {
+			cursor: pointer;
+			color: $yellow;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:after {
+			content: " ";
+			margin-left: -1em;
+		}
+	}
+}
+
+.all-films {
+	margin-top: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
+
+	.film {
+		width: 300px;
+		height: 300px;
+		background-color: $yellow;
+		clip-path: polygon(60px 0, 100% 0, 100% calc(100% - 60px), calc(100% - 60px) 100%, 0 100%, 0 60px);
+
+		a {
+			@include fluidFontSize(14px, 24px, 360px, 1280px, 24px);
+			text-decoration: none;
+			letter-spacing: 4px;
+			color: $black;
+			width: 100%;
+    		height: 100%;
+		}
+
+		&:hover {
+			background-color: $film_color;
+
+			a {
+				color: $yellow;
+			}
+		}
+
+		&:nth-child(2n) {
+			clip-path: polygon(240px 0px, 100% 60px, 100% calc(100% - 60px), calc(100% - 00px) 100%, 60px 100%, -240px 0px);
+		}
+	}
+
+}
+
+.loader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.parameter {
+	.parameter__title {
+		margin: 20px 0 20px 0;
+		transition: all 0.5s;
+		color: #fff;
+		animation: red 1.5s ease-in-out infinite alternate;
+		font-weight: 700;
+		letter-spacing: 5px;
+		font-family: "Starjhol";
+	}
+
+	&:nth-child(2n) {
+		.parameter__title {
+			color: #228DFF;
+			font-weight: 700;
+			animation: blue 1.5s ease-in-out infinite alternate;
+			color: #ffffff;
+		}
+	}
+
+	.parameter__link {}
+
+	.parameter__text {
+		color: $text_color;
+	}
+}
+
+
+@keyframes red {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #aa004a, 0 0 70px #aa004a, 0 0 80px #aa004a, 0 0 100px #aa004a, 0 0 150px #aa004a;
+	}
+
+	to {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #aa004a, 0 0 35px #aa004a, 0 0 40px #aa004a, 0 0 50px #aa004a, 0 0 75px #aa004a;
+	}
+}
+
+@keyframes blue {
+	from {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+	}
+
+	to {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+	}
+}
